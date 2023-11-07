@@ -41,7 +41,9 @@ class _AnimatedColorPaletteState extends State<AnimatedColorPalette> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             for (Color color in currentPalette)
-              Container(
+              AnimatedContainer(
+                duration: Duration(seconds: 2),
+                curve: Curves.easeInOut,
                 width: 100,
                 height: 100,
                 color: color,
